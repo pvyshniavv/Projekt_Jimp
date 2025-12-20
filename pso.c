@@ -9,7 +9,7 @@
 double oblicz_fitness(double x, double y , MapaTerenu *mapa){
     int wiersz = (int)y;
     int kolumna = (int)x;
-    if ( wiersz < 0 || wiersz >= mapa->wiersze || kolumna < 0 || kolumna => mapa->kolumny){// when beyond the map
+    if ( wiersz < 0 || wiersz >= mapa->wiersze || kolumna < 0 || kolumna >= mapa->kolumny){// when beyond the map
         return -10000.0; //Bad result
     }
     return mapa-> tablica[wiersz][kolumna];
