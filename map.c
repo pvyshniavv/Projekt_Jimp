@@ -1,12 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct { //map.h
-    int wiersze;
-    int kolumny;
-    double **tablica;
-
-}MapaTerenu;
+#include "map.h"
 
 
 
@@ -48,5 +42,15 @@ void drukuj_mape(MapaTerenu mapa_terenu) { //definicja funkcji (czaswm ma *, cza
             printf("%lf ", mapa_terenu.tablica[w][k]);
         }
         printf("\n");
+    }
+}
+
+void zwolnij_mape(MapaTerenu *mapa) {
+    if (mapa->tablica != NULL) {
+        for (int i = 0; i < mapa->wiersze; i++) {
+            free(mapa->tablica[i]);
+        }
+        free(mapa->tablica);
+        mapa->tablica = NULL;
     }
 }
