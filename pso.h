@@ -30,5 +30,6 @@ typedef struct {
 Swarm* inicjalizuj_roj(int liczba_czastek, MapaTerenu *mapa, double w, double c1, double c2);
 double oblicz_fitness(double x, double y, MapaTerenu *mapa);
 void zwolnij_roj(Swarm *roj);
+void aktualizuj_roj(Swarm *roj, MapaTerenu *mapa);
 
 #endif

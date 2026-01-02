@@ -5,7 +5,6 @@
 #include "pso.h"
 
 
-
 double oblicz_fitness(double x, double y , MapaTerenu *mapa){
     int wiersz = (int)y;
     int kolumna = (int)x;
